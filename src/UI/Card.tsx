@@ -6,7 +6,15 @@ import CardActionArea from '@mui/material/CardActionArea';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 
-export default function CardComponent(props){
+interface RecipeCardProps {
+    image: string,
+    name: string,
+    cuisine: string,
+    difficulty: string,
+    rating: number
+}
+
+export default function CardComponent(props: RecipeCardProps){
     return (
         <Card>
             <CardActionArea>
@@ -25,7 +33,7 @@ export default function CardComponent(props){
                     <Chip label={`Difficulty : ${props.difficulty}`}></Chip>
                 </div>
                 <div className="flex align-center mt-2">
-                    <span className="font-bold ms-4">{props.rating}</span>
+                    <span className="font-bold me-2">{props.rating}</span>
                     <Rating name="half-rating-read" defaultValue={props.rating} precision={0.1} readOnly />
                 </div>
                 </CardContent>

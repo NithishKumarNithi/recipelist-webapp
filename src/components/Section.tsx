@@ -1,3 +1,4 @@
+import { Link } from 'react-router';
 import CardComponent from '../UI/Card';
 
 export default function Section({
@@ -18,14 +19,16 @@ export default function Section({
       recipeList.length === 0 
       ? <p>no data</p> 
       : recipeList.map(recipe => (
+        <Link to={`/recipes/${recipe.id}`} key={recipe.id} >
           <CardComponent 
-            key={recipe.id} 
             image={recipe.image} 
             name={recipe.name}
             cuisine={recipe.cuisine}
             difficulty={recipe.difficulty}
             rating={recipe.rating}
-          />)
+          />
+          </Link>
+          )
         )
       }
       </div>
