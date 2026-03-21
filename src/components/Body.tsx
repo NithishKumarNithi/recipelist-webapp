@@ -1,33 +1,10 @@
-import { useState, useEffect } from 'react';
 import { Outlet } from 'react-router';    
-import Section from './Section';
 
 export default function Body() {
-  // const [recipes, setRecipes] = useState(null)
   
-  // useEffect(() => {
-  //   const getRecipes = async () => {
-  //     const response = await fetch('https://dummyjson.com/recipes?limit=60');
-  //     const result = await response.json();
-  //     setRecipes(result.recipes)
-  //   }
-  //   getRecipes();
-  // }, [])
-
   return (
     <main className="max-w-5xl p-2 mx-auto">
       <Outlet />
-      {/* { !recipes 
-      ? <p>No Data Available</p> 
-      : (
-        <>
-          <Section title={'Indian'} recipes={recipes} />
-          <Section title={'Italian'} recipes={recipes} />
-          <Section title={'Pakistani'} recipes={recipes} />
-        </>
-      )} */}
     </main>
-    
-
   );
 }

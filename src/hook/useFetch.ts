@@ -22,5 +22,5 @@ export default function useFetch(url){
     getRecipes();
    }, [url]);
 
-   return data !== null ? data : [];
+   return data !== null ? data : "";
 }
